@@ -1,0 +1,497 @@
+.page-header-wrapper {
+  width: 100%;
+  border-bottom: 1px solid #00000010;
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include on-palm {
+    height: 64px;
+  }
+
+  @include dark-mode {
+    border-bottom: 1px solid #ffffff10;
+  }
+}
+
+.page-header {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  max-width: 108 * $unit;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0  8 * $unit;
+
+  @include on-palm {
+    padding: 0 $unit * 4;
+  }
+
+  .site-icon {
+    display: flex;
+    margin: 0;
+
+    color: black;
+    font-size: 1.4rem;
+    font-family: "Poppins";
+  
+    @include dark-mode {
+      color: #eee;
+    }
+
+    @include on-palm {
+      font-size: 1.3rem;
+    }
+
+    svg {
+      height: 24px;
+      @include on-palm {
+        height: 20px;
+      }
+
+      @include dark-mode {
+        fill: #fff;
+      }
+    }
+  }
+
+  .site-menu {
+    display: flex;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 450;
+    padding: 0;
+    margin: 0;
+
+    a:visited {
+      color: $black-color;
+
+      @include dark-mode {
+        color: white;
+      }
+    }
+
+    .active {
+      a {
+        color: #000000 !important;
+
+        @include dark-mode {
+          color: white;
+        }
+      }
+    }
+
+    li {
+      &:not(:first-child) {
+        margin-left: 22px;
+      }
+    }
+  }
+}
+
+.main-page {
+  flex: 1;
+  max-width: 108 * $unit;
+  display: flex;
+  width: 100%;
+  color: black;
+  flex-direction: column;
+
+  @include dark-mode {
+    color: white;
+  }
+
+  .app-page {
+
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 5 * $unit 0 8 * $unit 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #00000010;
+    }
+
+    @include dark-mode {
+      &:not(:last-child) {
+        border-bottom: 1px solid #ffffff10;
+      }
+    }
+
+    .app-header {
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      flex: 1 0;
+
+      padding: 0 $unit * 12;
+
+      @include on-palm {
+        padding: 0 $unit * 4;
+      }
+
+
+      .app-icon {
+        img {
+          width: 9 * $unit;
+          height: 9 * $unit;
+          display: block;
+
+          @include on-palm {
+            width: 8 * $unit;
+            height: 8 * $unit;
+          }
+        }
+
+        border-radius: 16px;
+        // box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+        overflow: hidden;
+        margin-right: $unit * 3;
+        border: 1px solid #00000010;
+
+        @include on-palm {
+          margin-right: $unit * 2;
+        }
+
+        @include dark-mode {
+          border: 1px solid #ffffff10;
+        }
+      }
+
+      .app-info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 6px;
+
+        .app-name {
+          font-size: 24px;
+          margin: 0;
+          font-weight: 600;
+          padding: 0;
+          color: #000;
+
+          &:hover {
+            color: $tint-color;
+          }
+
+          @include on-palm {
+            font-size: 22px;
+          }
+
+          @include dark-mode {
+            color: #fff;
+          }
+        }
+
+        .app-platform {
+          font-size: 17px;
+          display: flex;
+          column-gap: 4px;
+
+          .app-platform-badge {
+            color: $grey-color;
+            padding: 2px 16px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+
+            @include dark-mode {
+              color: #eee;
+              background-color: #222;
+            }
+          }
+
+          @include on-palm {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .app-download {
+        flex: 1;
+        display: flex;
+        justify-content: right;
+
+        img {
+          height: $unit * 8;
+          width: $unit * 15;
+        }
+      }
+    }
+
+    .app-description {
+      margin: 16px 0 24px 0;
+      flex-grow: 1;
+
+      padding: 0 $unit * 12;
+
+      @include on-palm {
+        padding: 0 $unit * 4;
+      }
+
+      p {
+        font-size: 18px;
+        padding: 0;
+        text-align: left;
+        vertical-align: middle;
+        line-height: 30px;
+        margin: 0;
+
+        @include on-palm {
+          font-size: 17px;
+          line-height: 28px;
+        }
+      }
+    }
+
+    .app-body {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      @include on-palm {
+        padding: 0 4 * $unit;
+      }
+
+      .app-screenshots-scroller {
+        flex-shrink: 1;
+        overflow-y: hidden;
+        overflow-x: auto;
+      }
+
+      .app-screenshots {
+        display: flex;
+        column-gap: $unit;
+        flex-wrap: nowrap;
+        width: 100%;
+
+        .app-screenshots-item {
+          display: flex;
+          border-radius: 18px;
+          width: 256px;
+          height: 552px;
+          flex-shrink: 0;
+          overflow: hidden;
+          border: 1px solid #00000010;
+          img {
+            width: 256px;
+            height: 552px;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .prev-button,.next-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 48px;
+        flex: 1;
+        opacity: 0;
+
+        img {
+          width: 16px;
+        }
+
+        @include on-palm {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.page-footer-wrapper {
+  width: 100%;
+  border-top: 1px solid #00000010;
+
+  @include dark-mode {
+    border-top: 1px solid #ffffff10;
+  }
+}
+
+.resources-section {
+  width: 100%;
+  padding: 0;
+  border-bottom: 1px solid #00000010;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  background-color: #fafafa;
+
+  @include dark-mode {
+    background-color: #121212;
+    border-bottom: 1px solid #ffffff10;
+  }
+}
+
+.resources-section-box {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  max-width: 108 * $unit;
+  color: $grey-color;
+  padding: 40px $unit * 8;
+  column-gap: 56px;
+
+  @include on-palm {
+    padding: 40px $unit * 2;
+    justify-content: space-around;
+  }
+
+  @include dark-mode {
+    color: white;
+  }
+
+  .copyrigiht-anouncement {
+    margin: 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    p {
+      max-width: 303px;
+      line-height: 18px;
+      color: $dark-color;
+
+      @include dark-mode {
+        color: white;
+      }
+    }
+
+    @include on-palm {
+      display: none;
+    }
+  }
+
+  .resources-group {
+    font-size: 14px;
+    padding: 0;
+
+    ul {
+      color: $dark-color;
+      list-style: none;
+      padding: 0px;
+      margin: 12px 0 0 0;
+    }
+
+    li {
+      &:not(:last-child) {
+        margin: 8px 0 8px 0;
+        padding: 0;
+      }
+    }
+
+    li {
+      a {
+        color: $dark-color;
+        @include dark-mode {
+          color: white;
+        }
+      }
+
+      a:visited {
+        color: $dark-color;
+        @include dark-mode {
+          color: white;
+        }
+      }
+
+      @include dark-mode {
+        color: white;
+      }
+    }
+
+    .group-title {
+      font-weight: 600;
+      color: $dark-color;
+      margin: 0;
+
+      @include dark-mode {
+        color: white;
+      }
+    }
+  }
+}
+
+.page-footer {
+
+  display: flex;
+  width: 100%;
+  font-size: 14px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .quote-section {
+    display: flex;
+    padding: 4px 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid $grey-lighter-color;
+  }
+
+  .site-description-group {
+    color: $grey-color;
+    width: 100%;
+    text-align: center;
+  }
+
+  .copyright-section {
+    width: 100%;
+    padding: 48px 8 * $unit;
+    max-width: 108 * $unit;
+    color: $grey-color;
+    font-weight: 450;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+
+    @include on-palm {
+      padding: 40px $unit * 4;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 8px;
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+    }
+
+    @include dark-mode {
+      color: $white-color;
+    }
+    
+    .copyright {
+      padding: 0;
+    }
+
+    .day-created-label {
+      padding: 0;
+    }
+
+    .day-created {
+      font-family: $monospace-font-family;
+      color: $dark-color;
+      font-weight: bold;
+      @include dark-mode {
+        color: white;
+      }
+    }
+  }
+}

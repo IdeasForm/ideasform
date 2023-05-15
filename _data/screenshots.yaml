@@ -1,0 +1,15 @@
+- name: Clip Jar
+  platform: ["iOS"]
+  prefix: "clipjar"
+  images: ["M0", "M2", "M3", "M4", "M5", "M6", "M7"]
+  description: Clip Jar is an iOS app that helps users organize and manage short text clips. It has features that make it easy to save, filter, search for, and share text clips, and can provide useful actions for detected links, phone numbers, emails, and addresses. It also has app shortcuts and Quick Actions.
+  link: "https://apps.apple.com/app/id1628120600?mt=8&ct=homepage"
+  tint: "0665CB"
+
+- name: Music Plus
+  platform: ["iOS"]
+  prefix: "musicplus"
+  images: ["65-0", "65-1", "65-2", "65-3", "65-4", "65-5", "65-6", "65-7"]
+  description: Music Plus bringing landscape feature to Apple Music. It also supports home screen widgets, share songs using stylized ASCII Art text and saving high-resolution artwork to Photos.
+  link: "https://apps.apple.com/app/id1626398921?mt=8&ct=homepage"
+  tint: "FA233B"
