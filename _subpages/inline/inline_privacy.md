@@ -21,7 +21,7 @@ In most case, we don't need your Information, except for check when you order ou
 
 ## Third-Party LLM Services
 
-We do not collect or store your chat data. However, to provide the core functionality of this app, your text and chat history are sent to third-party Large Language Model (LLM) providers, including OpenAI, Moonshot, and DeepSeek. Their use of your data is governed by their respective privacy policies.
+Your chat history is stored locally on your device and is not transmitted to our servers. However, to provide the core functionality of this app, your current text input is sent to third-party Large Language Model (LLM) providers, including OpenAI, Moonshot, and DeepSeek. Their use of your data is governed by their respective privacy policies.
 
 ## Information Disclosed to Third Parties
 
