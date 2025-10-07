@@ -1,65 +1,31 @@
-# Installation Of Site
+# Installation
 
-## Dependencies
+1.  **Set up Ruby:** Make sure you are using Ruby `2.7.3`. If you're using `rbenv`, you can set the local Ruby version with:
+    ```bash
+    rbenv local 2.7.3
+    ```
 
-Check GitHub Pages Dependency versions:
+2.  **Install Dependencies:** Install the required gems.
+    ```bash
+    gem install bundler:2.3.10
+    bundle install
+    ```
 
-https://pages.github.com/versions/
+3.  **Run the Server:** Build the site and run a local server.
+    ```bash
+    bundle exec jekyll serve --livereload --drafts
+    ```
+    The site will be available at `http://127.0.0.1:4000/`.
 
-## Install
+## Manage Script
 
-```
-$ brew install ruby@2.7
-$ cd ~ && sudo chown -R Roger .bundle;
-$ sudo gem install bundler
-$ sudo gem install jekyll -v 3.9.0
-$ bundle install --local
-$ bundle exec jekyll serve --watch
-```
-
-## Modify Content
-
-### Create Posts
-```
-$ python3 manage.py -c {post name here}
-```
-
-### Add New Product
-Modify `_data/products.csv`
-
-## Enable TOC
+Usage: `./manage.py [-cgvumwd] [input]`
 
 ```
-  {% capture sidebar_content %}
-  <!-- <div class="share-sidebar">
-    <button> Share </button>
-  </div> -->
-  <div>
-    <p class="toc-sidebar-header">目录</p>
-    {%- include toc.html html=content h_min=2 h_max=2 class='toc-sidebar' item_class='toc-sidebar-item' -%}
-  </div>
-  {% endcapture %}
-  {%- include sidebar.html sidebar_content=sidebar_content -%}
-
-
-  // Version 2.0
-
-  {% capture sidebar_content %}
-  <div class="sidebar-category">
-    <p class="category-header">分类</p>
-    <ul class="category-list">
-      <li class="category-item"><a class="category-item-link current" href="/categories/">全部</a></li>
-      {% assign category_count = 0 %}
-      {%- for category in site.categories -%}
-      {% if category_count <= 7 %}
-      <li class="category-item"><a class="category-item-link"
-          href="/categories/#{{ category | first | strip}}">{{ category | first | capitalize }}</a></li>
-      {% assign category_count = category_count | plus: 1 %}
-      {% endif %}
-      {%- endfor -%}
-    </ul>
-  </div>
-  {% endcapture %}
-
-  {%- include sidebar.html sidebar_content=sidebar_content -%}
+-c:     create post
+-g:     generate static templates
+-v:     do some check job
+-m:     covert a normal markdown file to jekyll format
+-u:     uglify scripts in tools folder
+-wd:    parse weixin article meta data
 ```
