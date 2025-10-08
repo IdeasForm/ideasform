@@ -29,7 +29,7 @@ We don't disclose any information to third parties.
 
 ## Changes to this Privacy Policy
 
-This Privacy Policy is subject to revision from time to time on a going-forward basis. We will post any revised version of the Privacy Policy [on this page](/inline/privacy/).
+This Privacy Policy is subject to revision from time to time on a going-forward basis. We will post any revised version of the Privacy Policy [on this page](/Inline/privacy/).
 
 ## Questions about the Privacy Policy
 
