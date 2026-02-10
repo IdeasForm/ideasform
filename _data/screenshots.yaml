@@ -13,3 +13,11 @@
   description: Music Plus bringing landscape feature to Apple Music. It also supports home screen widgets, share songs using stylized ASCII Art text and saving high-resolution artwork to Photos.
   link: "https://apps.apple.com/app/id1626398921?mt=8&ct=homepage"
   tint: "FA233B"
+
+- name: Inline
+  platform: ["Mac"]
+  prefix: "inline"
+  images: ["M0", "M1", "M2", "M3", "M4"]
+  description: Inline is an AI writing assistant for macOS that works across apps. Select text anywhere to check grammar, translate, summarize, improve writing, or refactor code—without copy/paste.
+  link: "https://apps.apple.com/us/app/inline-the-inline-ai/id6748410177?mt=12"
+  tint: "2F6BFF"
