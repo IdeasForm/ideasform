@@ -5,7 +5,7 @@ titie: Ideas Form
 
 <div class="main-page">
     {% for app in site.data.screenshots %}
-    <div class="app-page">
+    <div class="app-page{% if app.platform contains 'Mac' %} mac{% endif %}">
         <div class="app-header">
             <div class="app-icon">
                 <img src="/assets/screenshots/{{app.prefix}}/appicon.jpg" alt="">

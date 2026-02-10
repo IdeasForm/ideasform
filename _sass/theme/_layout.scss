@@ -289,6 +289,19 @@
             object-fit: cover;
           }
         }
+
+        // macOS apps use landscape screenshots
+        .app-page.mac & {
+          .app-screenshots-item {
+            width: 480px;
+            height: 300px;
+            border-radius: 12px;
+            img {
+              width: 480px;
+              height: 300px;
+            }
+          }
+        }
       }
 
       .prev-button,.next-button {
