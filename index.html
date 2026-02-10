@@ -52,7 +52,8 @@ titie: Ideas Form
             </div>
             <div class="app-screenshots-scroller">
                 <div class="app-screenshots">
-                    {% for image_name in app.media | default: app.images %}
+                    {% assign media = app.media | default: app.images %}
+                    {% for image_name in media %}
                     {% if image_name contains "video:" %}
                     <div class="app-screenshots-item video">
                         <video src="/assets/screenshots/{{app.prefix}}/{{ image_name | replace: 'video:', '' }}.mp4" controls playsinline preload="metadata"></video>
