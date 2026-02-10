@@ -14,7 +14,7 @@ titie: Ideas Form
                 <a class="app-name" href="{{app.link}}">{{app.name}}</a>
                 <div class="app-platform">
                     {% for plt in app.platform %}
-                    <div class="app-platform-badge">{{plt}}</div>
+                    <div class="app-platform-badge">{% if plt == "Mac" %}macOS{% else %}{{plt}}{% endif %}</div>
                     {% endfor %}
                 </div>
             </div>
