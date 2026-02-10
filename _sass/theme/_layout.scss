@@ -193,14 +193,15 @@
         }
 
         .app-platform {
-          font-size: 17px;
+          font-size: 16px;
+          font-weight: 500;
           display: flex;
           column-gap: 4px;
 
           .app-platform-badge {
             color: $grey-color;
             padding: 2px 16px;
-            border-radius: 5px;
+            border-radius: 999px; // capsule
             background-color: #f2f2f2;
 
             @include dark-mode {
@@ -289,7 +290,10 @@
             object-fit: cover;
           }
         }
+
       }
+
+
 
       .prev-button,.next-button {
         display: flex;
@@ -494,4 +498,28 @@
       }
     }
   }
+}
+
+
+// macOS apps use landscape screenshots (override)
+// Measured from App Store media we fetch: 1286x804 (~1.599:1)
+.main-page .app-page.mac .app-body .app-screenshots .app-screenshots-item {
+  width: 480px;
+  aspect-ratio: 1286 / 804;
+  height: auto;
+  border-radius: 12px;
+}
+
+.main-page .app-page.mac .app-body .app-screenshots .app-screenshots-item img {
+  width: 480px;
+  height: auto;
+  aspect-ratio: 1286 / 804;
+  object-fit: cover;
+}
+
+.main-page .app-page.mac .app-body .app-screenshots .app-screenshots-item video {
+  width: 480px;
+  height: auto;
+  aspect-ratio: 1286 / 804;
+  object-fit: cover;
 }

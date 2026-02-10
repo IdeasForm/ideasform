@@ -5,7 +5,7 @@ titie: Ideas Form
 
 <div class="main-page">
     {% for app in site.data.screenshots %}
-    <div class="app-page">
+    <div class="app-page{% if app.platform contains 'Mac' %} mac{% endif %}">
         <div class="app-header">
             <div class="app-icon">
                 <img src="/assets/screenshots/{{app.prefix}}/appicon.jpg" alt="">
@@ -14,7 +14,7 @@ titie: Ideas Form
                 <a class="app-name" href="{{app.link}}">{{app.name}}</a>
                 <div class="app-platform">
                     {% for plt in app.platform %}
-                    <div class="app-platform-badge">{{plt}}</div>
+                    <div class="app-platform-badge">{% if plt == "Mac" %}macOS{% else %}{{plt}}{% endif %}</div>
                     {% endfor %}
                 </div>
             </div>
@@ -38,6 +38,14 @@ titie: Ideas Form
                             .app-download.{{app.prefix}} a svg path {
                                 fill: #{{app.tint}};
                             }
+
+                            {% if app.prefix == "inline" %}
+                            @media (prefers-color-scheme: dark) {
+                                .app-download.inline a svg path {
+                                    fill: #FAFAFA;
+                                }
+                            }
+                            {% endif %}
                         </style>
                     </svg>                      
                 </a>
@@ -52,10 +60,17 @@ titie: Ideas Form
             </div>
             <div class="app-screenshots-scroller">
                 <div class="app-screenshots">
-                    {% for image_name in app.images %}
+                    {% assign media = app.media | default: app.images %}
+                    {% for image_name in media %}
+                    {% if image_name contains "video:" %}
+                    <div class="app-screenshots-item video">
+                        <video src="/assets/screenshots/{{app.prefix}}/{{ image_name | replace: 'video:', '' }}.mp4" controls playsinline preload="metadata"></video>
+                    </div>
+                    {% else %}
                     <div class="app-screenshots-item">
                         <img src="/assets/screenshots/{{app.prefix}}/{{image_name}}.jpg" alt="">
                     </div>
+                    {% endif %}
                     {% endfor %}
                 </div>
             </div>
