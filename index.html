@@ -38,6 +38,14 @@ titie: Ideas Form
                             .app-download.{{app.prefix}} a svg path {
                                 fill: #{{app.tint}};
                             }
+
+                            {% if app.prefix == "inline" %}
+                            @media (prefers-color-scheme: dark) {
+                                .app-download.inline a svg path {
+                                    fill: #FAFAFA;
+                                }
+                            }
+                            {% endif %}
                         </style>
                     </svg>                      
                 </a>

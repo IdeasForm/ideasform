@@ -201,7 +201,7 @@
           .app-platform-badge {
             color: $grey-color;
             padding: 2px 16px;
-            border-radius: 5px;
+            border-radius: 999px; // capsule
             background-color: #f2f2f2;
 
             @include dark-mode {
