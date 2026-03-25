@@ -1,20 +1,20 @@
 ---
-title: mcalendar Privacy Policy
+title: MCalendar Privacy Policy
 permalink: "/mcalendar/privacy/"
 layout: license
 nav_item: 22
 nav_title: Privacy
 date: 2026-03-25 00:00:00 +0000
-author: mcalendar
+author: MCalendar
 ---
 
-This privacy policy explains what information is collected and stored by mcalendar.
+This privacy policy explains what information is collected and stored by MCalendar.
 
-Ideas Form ("we," "us," or "our") operates the mcalendar application and related websites (each, an "App" or a "Site," respectively) and related services (collectively, the "Services").
+Ideas Form ("we," "us," or "our") operates the MCalendar application and related websites (each, an "App" or a "Site," respectively) and related services (collectively, the "Services").
 
 ## What Information We Collect
 
-mcalendar does not collect personal information from you.
+MCalendar does not collect personal information from you.
 
 We do not collect:
 
@@ -26,13 +26,13 @@ We do not collect:
 
 ## Calendar Data
 
-If you choose to grant mcalendar access to calendars on your Mac, that access is used only to display your calendar information inside the app.
+If you choose to grant MCalendar access to calendars on your Mac, that access is used only to display your calendar information inside the app.
 
 Your calendar data stays on your device and is not transmitted to our servers.
 
 ## Third-Party Services
 
-mcalendar does not use third-party analytics, advertising SDKs, or tracking services to collect your data.
+MCalendar does not use third-party analytics, advertising SDKs, or tracking services to collect your data.
 
 ## Information Disclosed to Third Parties
 
